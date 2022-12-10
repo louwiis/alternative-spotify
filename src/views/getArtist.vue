@@ -23,12 +23,14 @@ init();
 
 <template>
   <main>
-    <div class="flex h-[300px] py-6 px-8 justify-end flex-col bg-gray-400">
-      <h1 class="text-8xl font-bold mb-6">{{ artist?.name }}</h1>
-      <span>{{ artist?.followers.total }} followers</span>
+    <div class="flex sm:h-[300px] h-[360px] py-6 px-8 justify-end flex-col bg-gray-400">
+      <h1 class="sm:text-8xl text-4xl font-bold mb-6">{{ artist?.name }}</h1>
+      <span class="sm:block hidden">{{ artist?.followers.total }} followers</span>
     </div>
 
     <div class="py-6 px-8">
+      <span class="sm:hidden block text-xs text-gray-400 mb-2">{{ artist?.followers.total }} followers</span>
+
       <h2 class="text-2xl font-bold mb-4">Popular</h2>
 
       <table class="w-full">

@@ -11,12 +11,12 @@ defineProps<{ album: AlbumType }>();
 <template>
   <RouterLink
     :to="`/album/${album.id}`"
-    class="hover:bg-[#242424] shrink-0 bg-[#181818] w-[185px] p-4 flex flex-col justify-center rounded-md gap-3"
+    class="sm:hover:bg-[#242424] shrink-0 sm:bg-[#181818] sm:w-[185px] w-full sm:p-4 flex sm:flex-col flex-row sm:justify-center rounded-md gap-3"
   >
     <img
       :src="album.images[0].url"
       :alt="album.name"
-      class="w-full rounded-md"
+      class="rounded-md sm:w-full w-[48px] sm:h-full h-[48px]"
     />
 
     <div class="flex flex-col gap-1">

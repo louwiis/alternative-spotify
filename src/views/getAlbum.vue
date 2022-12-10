@@ -49,14 +49,16 @@ init();
   <main class="py-6 px-8">
     <div class="flex items-end">
       <img
-        class="w-[232px] h-[232px] mr-6"
+        class="md:w-[232px] w-[192px] h-[192px] md:h-[232px] mr-6"
         v-if="album?.images"
         :src="album?.images[0].url"
       />
 
       <div>
         <span class="text-xs font-bold">ALBUM</span>
-        <h1 class="text-[96px] leading-none font-bold mb-8">
+        <h1
+          class="md:text-[96px] text-[72px] leading-none font-bold mb-8 break-keep"
+        >
           {{ album?.name }}
         </h1>
 
@@ -74,11 +76,11 @@ init();
           </RouterLink>
           •
           <span v-if="album?.release_date">
-            {{ getYear(album?.release_date) + " •" }}
+            {{ getYear(album?.release_date) }}
           </span>
-
+          •
           <span>
-            {{ album?.total_tracks + " songs, " }}
+            {{ album?.total_tracks + " songs," }}
           </span>
 
           <span v-if="album?.tracks?.items" class="text-gray-400">

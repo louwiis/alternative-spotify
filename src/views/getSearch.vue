@@ -13,7 +13,7 @@ const store = useStore();
     <div v-if="store.albums.length !== 0" class="flex flex-col gap-4">
       <h2 class="text-2xl font-bold">Result</h2>
 
-      <ul class="flex flex-row flex-wrap gap-[24px] overflow-x-scroll">
+      <ul class="flex flex-row flex-wrap gap-[24px]">
         <AlbumCard
           v-for="album in store.albums?.items"
           :key="album.id"
