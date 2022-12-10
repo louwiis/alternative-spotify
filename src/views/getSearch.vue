@@ -9,7 +9,7 @@ const store = useStore();
 </script>
 
 <template>
-  <main class="flex flex-col py-6 px-8">
+  <main class="flex flex-col sm:py-6 py-4 px-3 sm:px-8v">
     <div v-if="store.albums.length !== 0" class="flex flex-col gap-4">
       <h2 class="text-2xl font-bold">Result</h2>
 

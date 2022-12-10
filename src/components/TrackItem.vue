@@ -9,31 +9,36 @@ defineProps<{
   track: trackType;
   index: number;
 }>();
+
 </script>
 
 <template>
   <tr
-    class="flex items-center px-4 py-1 hover:bg-gray-500 rounded hover:bg-opacity-20"
-    @click="store.setSong(track?.preview_url)"
+    class="flex items-center sm:hover:bg-gray-500 h-[45px] rounded hover:bg-opacity-20"
+    @click="store.setSong(track)"
   >
-    <td class="sm:block hidden text-gray-400 grow-0 text-[16px] w-[48px] px-4">
+    <td class="text-gray-400 grow-0 text-[16px] sm:w-[48px] px-4">
       {{ index + 1 }}
+    </td>
+
+    <td class="grow-0" v-if="track?.album?.images?.url">
+      <img :src="track?.album?.images[0]?.url" class="w-[40px] h-[40px] mr-4" />
     </td>
 
     <td class="grow">
       <h3
-        class="text-[16px] max-w-[512px] text-ellipsis overflow-hidden font-bold"
+        class="sm:text-[16px] text-sm sm:max-w-[512px] max-w-[200px] h-[16px] text-ellipsis overflow-hidden font-bold"
       >
         {{ track?.name }}
       </h3>
       <RouterLink
         :to="'/artist/' + track.artists[0].id"
-        class="text-gray-400 text-[14px]"
+        class="text-gray-400 sm:text-[14px] text-sm"
         >{{ track.artists[0].name }}
       </RouterLink>
     </td>
 
-    <td v-if="track?.duration_ms" class="text-gray-400 grow-0">
+    <td v-if="track?.duration_ms" class="text-gray-400 sm:block hidden grow-0">
       {{
         Math.floor(track?.duration_ms / 60000) +
         ":" +

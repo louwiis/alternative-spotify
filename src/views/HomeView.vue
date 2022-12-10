@@ -6,7 +6,7 @@ const store = useStore();
 </script>
 
 <template>
-  <main class="py-6 px-8">
+  <main class="sm:py-6 py-4 px-3 sm:px-8">
     <div v-if="store.history.length != 0">
       <h1 class="text-2xl font-bold mb-4">Recent searches</h1>
 

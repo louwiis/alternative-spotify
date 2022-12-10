@@ -18,7 +18,7 @@ import MobileNav from "@/components/DefaultMobileNav.vue";
         <RouterView class="grow text-white overflow-y-auto" />
       </div>
     </div>
-    <Player class="h-[90px]" />
+    <Player />
     <MobileNav class="sm:hidden block shrink-0" />
   </div>
 </template>

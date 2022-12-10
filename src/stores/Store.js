@@ -7,7 +7,6 @@ export const useStore = defineStore("store", {
       song: null,
       albums: [],
       history: [],
-
       pageUrl: null,
       pageName: null,
       previousPageUrl: null,
