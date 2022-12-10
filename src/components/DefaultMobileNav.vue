@@ -1,10 +1,10 @@
 <template>
   <nav class="h-[64px] bg-black text-sm text-[#b3b3b3]">
-    <div class="flex justify-around my-auto">
+    <div class="flex justify-around">
       <RouterLink
         to="/"
         exact-active-class="text-white"
-        class="font-bold h-full flex items-center h-[40px]"
+        class="font-bold flex items-end h-[40px]"
       >
         <svg
           role="img"
@@ -23,7 +23,7 @@
 
       <RouterLink
         to="/search"
-        class="flex items-center h-[40px] font-bold"
+        class="flex items-end h-[40px] font-bold"
         exact-active-class="text-white"
       >
         <svg

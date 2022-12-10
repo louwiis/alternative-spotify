@@ -16,7 +16,7 @@ defineProps<{
     class="flex items-center px-4 py-1 hover:bg-gray-500 rounded hover:bg-opacity-20"
     @click="store.setSong(track?.preview_url)"
   >
-    <td class="text-gray-400 grow-0 text-[16px] w-[48px] px-4">
+    <td class="sm:block hidden text-gray-400 grow-0 text-[16px] w-[48px] px-4">
       {{ index + 1 }}
     </td>
 

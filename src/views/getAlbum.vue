@@ -46,18 +46,20 @@ init();
 </script>
 
 <template>
-  <main class="py-6 px-8">
-    <div class="flex items-end">
+  <main class="sm:py-6 py-4 px-3 sm:px-8">
+    <div
+      class="flex sm:flex-row flex-col sm:items-end sm:justify-start justify-center"
+    >
       <img
-        class="md:w-[232px] w-[192px] h-[192px] md:h-[232px] mr-6"
+        class="md:w-[232px] sm:w-[192px] w-[250px] h-[250px] sm:h-[192px] md:h-[232px] sm:mr-6 sm:mx-0 mx-auto"
         v-if="album?.images"
         :src="album?.images[0].url"
       />
 
       <div>
-        <span class="text-xs font-bold">ALBUM</span>
+        <span class="text-xs font-bold sm:block hidden">ALBUM</span>
         <h1
-          class="md:text-[96px] text-[72px] leading-none font-bold mb-8 break-keep"
+          class="md:text-[96px] sm:text-[72px] text-xl mt-4 sm:mt-0 leading-none font-bold mb-4 sm:mb-8 break-keep"
         >
           {{ album?.name }}
         </h1>
@@ -90,8 +92,8 @@ init();
       </div>
     </div>
 
-    <table class="w-full">
-      <thead class="w-full">
+    <table class="sm:mt-0 mt-4 w-full">
+      <thead class="sm:block hidden w-full">
         <tr class="text-[14px] px-4 text-gray-400 flex items-center">
           <th class="px-4 py-4 grow-0">#</th>
           <th class="text-left grow">TITLE</th>
